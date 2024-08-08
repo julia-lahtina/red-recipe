@@ -1,0 +1,24 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "name": "Apple Frangipan Tart",
+      "image": "https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Apple & Blackberry Crumble",
+      "image": "https://www.youtube.com/watch?v=4vhcOwVBDO4"
+    },
+    {
+      "id": "3",
+      "name": "Apam balik",
+      "image": "https://www.youtube.com/watch?v=6R8ffRRJcrg"
+    },
+    {
+      "id": "4",
+      "name": "Ayam Percik",
+      "image": "https://www.youtube.com/watch?v=9ytR28QK6I8"
+    }
+  ]
+}
