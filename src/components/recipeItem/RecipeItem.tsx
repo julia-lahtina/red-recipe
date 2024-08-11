@@ -2,6 +2,7 @@ import React from 'react'
 import s from './RecipeItem.module.css'
 import { useActions } from '../../hooks/useActions'
 import { useFavorites } from '../../hooks/useFavorites'
+import { useGetRecipesQuery } from '../../store/api/api'
 
 type RecipeItem = {
     id: number
@@ -9,6 +10,9 @@ type RecipeItem = {
 }
 
 export const RecipeItem = (recipe: RecipeItem) => {
+
+    const { data } = useGetRecipesQuery()
+    console.log(data)
 
     const favorites = useFavorites()
     const { toggleFavorites } = useActions()
