@@ -1,4 +1,4 @@
-import { CreateRecipe } from "./components/createRecipe/createRecipe"
+import { CreateRecipe } from "./components/createRecipe/CreateRecipe"
 import { Header } from "./components/recipeItem/header/Header"
 import { RecipeItem } from "./components/recipeItem/RecipeItem"
 import { User } from "./components/user/User"
@@ -19,7 +19,7 @@ function App() {
         {isLoading
           ? <div>Loading...</div>
           : data ? data.map(recipe => {
-            return <RecipeItem key={recipe.id} name={recipe.name} image={recipe.image} id={recipe.id} />
+            return <RecipeItem key={recipe.id} recipe={recipe} />
           }) : <div>Not found</div>
         }
 

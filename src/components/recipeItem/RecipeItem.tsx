@@ -2,15 +2,14 @@ import React from 'react'
 import s from './RecipeItem.module.css'
 import { useActions } from '../../hooks/useActions'
 import { useFavorites } from '../../hooks/useFavorites'
+import { IRecipe } from '../../types/recipe.types'
 
 
-type RecipeItem = {
-    id: number
-    name: string
-    image: string
+interface IRecipeItem {
+    recipe: IRecipe
 }
 
-export const RecipeItem = (recipe: RecipeItem) => {
+export const RecipeItem = ({ recipe }: IRecipeItem) => {
 
     const favorites = useFavorites()
     const { toggleFavorites } = useActions()
