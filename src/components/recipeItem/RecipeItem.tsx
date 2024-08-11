@@ -2,17 +2,15 @@ import React from 'react'
 import s from './RecipeItem.module.css'
 import { useActions } from '../../hooks/useActions'
 import { useFavorites } from '../../hooks/useFavorites'
-import { useGetRecipesQuery } from '../../store/api/api'
+
 
 type RecipeItem = {
     id: number
     name: string
+    image: string
 }
 
 export const RecipeItem = (recipe: RecipeItem) => {
-
-    const { data } = useGetRecipesQuery()
-    console.log(data)
 
     const favorites = useFavorites()
     const { toggleFavorites } = useActions()
@@ -23,7 +21,7 @@ export const RecipeItem = (recipe: RecipeItem) => {
 
     return (
         <div className={s.item}>
-            {/* <img src="" alt="" /> */}
+            <img src={recipe.image} alt={recipe.name} width={100} />
             <h3>{recipe.name}</h3>
             <button onClick={() => toggleFavorites(recipe)}>
                 {isExist ? 'Remove from favorites' : 'Add to favorites'}

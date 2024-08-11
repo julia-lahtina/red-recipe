@@ -20,11 +20,29 @@ button {
   color: #fff;
   padding: 4px 5px;
   border-radius: 5px;
-  margin-top: 5px;
   cursor: pointer;
 }
 
 button:hover {
   background-color: #9b5b66;
   transition: 0.4s ease-in-out;
+}
+
+form {
+  padding: 0 10px;
+}
+
+input {
+  border: 1px solid transparent;
+  color: #222;
+  padding: 4px 5px;
+  border-radius: 5px;
+  margin-bottom: 7px;
+  transition: 0.4s ease-in-out;
+  display: block;
+  outline: none;
+}
+
+input:focus {
+  border-color: #E08594;
 }
